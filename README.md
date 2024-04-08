@@ -1,4 +1,6 @@
 # Handwritten Meitei-Mayek Recognition using CNN
+![image](https://github.com/galax19ksh/Handwritten-Meitei-Mayek-Recognition/assets/112553872/b309a8e6-b327-4046-9afa-28dcb7769ede)
+
 ## Abstract:
 Handwritten character recognition is a challenging task in the field of computer vision and machine learning. Meitei Mayek, an ancient script used in the India state of Manipur, presents a unique significant challenge due to its complex
 characters and limited availability of resources and advancements in the field.
@@ -25,8 +27,11 @@ for less-resourced languages like Meitei Mayek.
 
 ## Introduction:
 *Platform Used:* Google Colab (jupyter notebook, T4 GPU)
-*Tools and Libraries:* PyTorch, PIL, pandas, numpy, matplotlib,
+
+*Tools and Libraries:* PyTorch, PIL, pandas, numpy, matplotlib
+
 *Frameworks:* Flask, FastAPI
+
 The Meitei Mayek script, used for writing
 the Manipuri language, dates back to the
 eleventh century but faced suppression
@@ -52,7 +57,9 @@ objective of creating a benchmark dataset of Meitei Mayek characters and also
 building robust recognition and translation models. Here in this project, I
 proposed a CNN model having multiple layers to achieve a high performance of
 90% accuracy.
+
 ## Dataset:
+
 For our project on Handwritten Meitei Mayek recognition using Convolutional
 Neural Networks (CNNs) in PyTorch, we utilized the dataset provided by Deena
 Hijam et al in their 2020 paper “On developing complete character set Meitei
@@ -64,9 +71,14 @@ enabling supervised learning for character recognition tasks. From the huge
 dataset containing over 1200 images for each class/label of characters, I
 selected only a few train and test examples due to limitation of my compute
 power (I have access to CPU and limited GPU).
+![image](https://github.com/galax19ksh/Handwritten-Meitei-Mayek-Recognition/assets/112553872/c9446458-269c-4f72-8df1-45665cbc89c2)
+
 **Dataset source:** http://agnigarh.tezu.ernet.in/~sarat/resources.html
+
 **No of labels/classes:** 55
+
 **No of training images used for each label:** 150
+
 **No of testing images used for each label:** 25
 
 ## Preprocessing:
@@ -75,6 +87,8 @@ steps including resizing, normalization, and augmentation. Resizing ensures
 that all images are of uniform dimensions suitable for the CNN architecture.
 The original pixel size of the character images have been modified to 64x64
 during the preprocessing.
+![image](https://github.com/galax19ksh/Handwritten-Meitei-Mayek-Recognition/assets/112553872/9458dc02-8823-4cc7-8228-a07a583753a1)
+
 *Tools used:* PIL (Python Imaging Library)
 
 ## Model Architecture:
@@ -91,7 +105,8 @@ of 512 units, followed by ReLU activation and dropout regularization with a
 probability of 0.5 to mitigate overfitting. The second dense layer outputs logits
 for classification into the specified number of classes, finalizing the model's
 prediction process.
- 
+ ![image](https://github.com/galax19ksh/Handwritten-Meitei-Mayek-Recognition/assets/112553872/2e856321-e56b-414c-b57d-c49d1114754c)
+
 `CNNModel(
  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
  (relu1): ReLU()
@@ -124,6 +139,7 @@ opportunities to learn from the training data and optimize its parameters. By
 utilizing the defined loss function and optimizer, the CNNModel underwent
 iterative training, gradually improving its ability to classify handwritten Meitei
 Mayek characters with increased accuracy.
+![image](https://github.com/galax19ksh/Handwritten-Meitei-Mayek-Recognition/assets/112553872/88c558b9-4eac-412a-ac66-27dfff7b21c3)
 
 ## Evaluation:
 We calculate metrics such as accuracy, precision, recall, and F1-score to
@@ -134,6 +150,8 @@ demonstrating its effectiveness in recognizing handwritten Meitei Mayek
 characters. The precision, recall, and F1-score for individual characters are also
 reported, indicating the model's performance on each class.
 Sample Prediction:
+![image](https://github.com/galax19ksh/Handwritten-Meitei-Mayek-Recognition/assets/112553872/21c57d2c-d13a-4c06-893c-3d3ad60b73ac)
+![image](https://github.com/galax19ksh/Handwritten-Meitei-Mayek-Recognition/assets/112553872/3344e592-a749-4504-ac54-3e3a26048fc3)
 
 ## Deployment:
 Following the successful training of the model, the subsequent step involves
@@ -145,6 +163,7 @@ handle incoming requests and the definition of corresponding functions to
 process these requests. Secondly, we seamlessly integrated the trained CNN
 model into the Flask application, encompassing the loading of model weights
 and architecture, ensuring readiness for inference.
+![image](https://github.com/galax19ksh/Handwritten-Meitei-Mayek-Recognition/assets/112553872/3acc6095-4ffe-403e-92b4-597b6393c31b)
 
 ## Conclusion:
 In conclusion, we have presented a CNN-based approach for handwritten
