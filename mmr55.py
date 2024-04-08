@@ -80,7 +80,6 @@ images, labels = next(iter(train_loader))
 print(f"Images shape: {images.shape}")
 print(f"Labels shape: {labels.shape}")
 
-# prompt: inspect some sample images from the data
 
 import matplotlib.pyplot as plt
 # Get a batch of images and labels
@@ -100,7 +99,6 @@ plt.show()
 num_labels = len(train_dataset.classes)
 print(f"Number of labels in the dataset: {num_labels}")
 
-# prompt: count no of images in each folder
 
 import os
 
@@ -131,7 +129,6 @@ image_counts = count_images(train_data_path)
 for subfolder, count in image_counts.items():
   print(f"Subfolder: {subfolder}, Image count: {count}")
 
-# prompt: build a cnn model
 
 import torch.nn as nn
 
@@ -204,7 +201,7 @@ print(f"Weight type: {model.conv1.weight.type()}")
 
 model = model.to(device)
 
-# prompt: ignore warnings
+
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -315,7 +312,6 @@ print(model)
 
 #model = torch.load("/content/drive/MyDrive/MMR project/1 - mmr15/mmr_model1.pt")
 
-# prompt: make prediction on an input image displaying the image. include code for input.
 
 import matplotlib.pyplot as plt
 # Define the path to the input image
