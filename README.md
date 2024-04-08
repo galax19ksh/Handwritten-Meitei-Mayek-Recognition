@@ -75,6 +75,7 @@ power (I have access to CPU and limited GPU).
 ![image](https://github.com/galax19ksh/Handwritten-Meitei-Mayek-Recognition/assets/112553872/c9446458-269c-4f72-8df1-45665cbc89c2)
 
 **Dataset source:** http://agnigarh.tezu.ernet.in/~sarat/resources.html
+
 You can also download a smaller dataset [here](https://drive.google.com/drive/folders/1Y3LL42Ppvqq7W1uglq6_yBHvIiZdwPkB?usp=sharing).
 
 **No of labels/classes:** 55
