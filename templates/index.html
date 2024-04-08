@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meitei Mayek Recognition</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #file-input {
+            display: block;
+            margin-bottom: 20px;
+        }
+        #prediction {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meitei Mayek Character Recognition</h1>
+    <p>Upload a handwritten Meitei Mayek character image:</p>
+    <input type="file" id="file-input" accept="image/*">
+    <br>
+    <button onclick="predictImage()">Predict</button>
+    <p id="prediction"></p>
+    <script>
+        function predictImage() {
+            const fileInput = document.getElementById('file-input');
+            const predictionText = document.getElementById('prediction');
+
+            if (fileInput.files.length === 0) {
+                predictionText.textContent = "Please select an image file.";
+                return;
+            }
+
+            const file = fileInput.files[0];
+
+            // Send the image file to the server for prediction using AJAX
+            const formData = new FormData();
+            formData.append('image', file);
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '/predict'); // Replace '/predict' with your actual prediction route
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    const prediction = JSON.parse(xhr.responseText);
+                    predictionText.textContent = `Predicted Character: ${prediction.character}`;
+                } else {
+                    predictionText.textContent = "Error: Prediction failed.";
+                }
+            };
+            xhr.send(formData);
+        }
+    </script>
+</body>
+</html>
