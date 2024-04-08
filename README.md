@@ -71,9 +71,11 @@ enabling supervised learning for character recognition tasks. From the huge
 dataset containing over 1200 images for each class/label of characters, I
 selected only a few train and test examples due to limitation of my compute
 power (I have access to CPU and limited GPU).
+
 ![image](https://github.com/galax19ksh/Handwritten-Meitei-Mayek-Recognition/assets/112553872/c9446458-269c-4f72-8df1-45665cbc89c2)
 
 **Dataset source:** http://agnigarh.tezu.ernet.in/~sarat/resources.html
+You can also download a smaller dataset [here](https://drive.google.com/drive/folders/1Y3LL42Ppvqq7W1uglq6_yBHvIiZdwPkB?usp=sharing).
 
 **No of labels/classes:** 55
 
@@ -188,3 +190,6 @@ the Northeastern Indian subcontinent would promote linguistic diversity and
 cultural preservation, enhancing the model's societal impact. These future
 endeavors aim to evolve the deployed model into a versatile and indispensable
 tool with broad implications across various domains.
+
+
+Thanks for reading till the end. If you want the trained model (.pt file), feel free to contact me galaxkshetrimayum16@gmail.com
